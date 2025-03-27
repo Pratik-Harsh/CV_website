@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pratik Harsh - Home</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f4; }
+        header { background: #004080; color: white; text-align: center; padding: 40px; }
+        nav { background: #00264d; padding: 15px; text-align: center; }
+        nav a { color: white; margin: 0 20px; text-decoration: none; font-weight: bold; font-size: 18px; cursor: pointer; }
+        section { background: white; padding: 40px; max-width: 900px; margin: 20px auto; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); text-align: center; }
+        footer { background: #004080; color: white; text-align: center; padding: 15px; margin-top: 20px; }
+        h2 { color: #004080; }
+    </style>
+    <script>
+        function loadContent(section) {
+            const content = {
+                home: `<h2>Welcome to My Professional Portfolio</h2>
+                       <p>Explore my research, projects, and expertise in power and energy systems.</p>
+                       <h3>About Me</h3>
+                       <p>I am a passionate researcher in power and energy systems, with expertise in smart grids, energy optimization, and AI-driven solutions for sustainable energy. Currently working as a Post-doctoral Research Associate at Durham University, I am dedicated to advancing energy efficiency and integrating renewable energy into power networks.</p>`,
+                experience: `<h2>Experience</h2>
+                             <ul style='text-align: left; max-width: 800px; margin: 0 auto;'>
+                                 <li><b>Post-doctoral Research Associate</b> - Durham University (2023-Present)</li>
+                                 <p>Conducting research on AI-driven energy systems, optimizing power grids for efficiency and sustainability.</p>
+                                 <li><b>Research Assistant</b> - University of Warwick (2022-2023)</li>
+                                 <p>Worked on smart grid optimization and renewable energy integration projects, developing cutting-edge algorithms.</p>
+                                 <li><b>Teaching Assistant</b> - IIT Kanpur (2018-2022)</li>
+                                 <p>Assisted in undergraduate and postgraduate courses on power systems, mentoring students and contributing to research.</p>
+                             </ul>`,
+                education: `<h2>Education</h2>
+                            <ul style='text-align: left; max-width: 800px; margin: 0 auto;'>
+                                <li><b>Ph.D. in Power & Energy Systems</b> - IIT Kanpur (2018-2022)</li>
+                                <li><b>M.Tech in Electrical Engineering</b> - IIT Kanpur (2016-2018)</li>
+                                <li><b>B.Tech in Electrical Engineering</b> - NIT Patna (2012-2016)</li>
+                            </ul>`,
+                projects: `<h2>Projects</h2>
+                           <p>Worked on AI-driven power optimization, smart grids, and renewable energy integration.</p>`,
+                publications: `<h2>Publications</h2>
+                              <p>Authored several research papers on smart grids, AI in energy systems, and renewable integration.</p>`,
+                skills: `<h2>Skills</h2>
+                        <ul>
+                            <li>Smart Grid Optimization</li>
+                            <li>Machine Learning for Power Systems</li>
+                            <li>Renewable Energy Integration</li>
+                            <li>Python, MATLAB, Power System Simulation</li>
+                        </ul>`,
+                awards: `<h2>Awards</h2>
+                         <ul>
+                             <li>Best Research Paper Award - IEEE Conference 2021</li>
+                             <li>Outstanding Researcher Award - IIT Kanpur 2022</li>
+                         </ul>`,
+                contact: `<h2>Contact</h2>
+                          <p>Email: pratik.harsh@email.com</p>
+                          <p>LinkedIn: linkedin.com/in/pratikharsh</p>
+                          <p>GitHub: github.com/pratikharsh</p>`
+            };
+            document.getElementById('content').innerHTML = content[section] || '<h2>Content Coming Soon</h2>';
+        }
+    </script>
+</head>
+<body onload="loadContent('home')">
+    <header>
+        <h1>Pratik Harsh</h1>
+        <p>Post-doctoral Research Associate | Power & Energy Systems | Researcher</p>
+    </header>
+    <nav>
+        <a onclick="loadContent('home')">Home</a>
+        <a onclick="loadContent('experience')">Experience</a>
+        <a onclick="loadContent('education')">Education</a>
+        <a onclick="loadContent('projects')">Projects</a>
+        <a onclick="loadContent('publications')">Publications</a>
+        <a onclick="loadContent('skills')">Skills</a>
+        <a onclick="loadContent('awards')">Awards</a>
+        <a onclick="loadContent('contact')">Contact</a>
+    </nav>
+    <section id="content">
+    </section>
+    <footer>
+        <p>&copy; 2025 Pratik Harsh | All Rights Reserved</p>
+    </footer>
+</body>
+</html>
